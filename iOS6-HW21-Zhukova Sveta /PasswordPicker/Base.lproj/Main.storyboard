@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PasswordPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZE5-I8-BA5" userLabel="Generate Password" colorLabel="IBBuiltInLabel-Blue">
+                                <rect key="frame" x="132" y="274" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="UXr-TM-MUU"/>
+                                    <constraint firstAttribute="height" constant="30" id="xcj-ZX-c6M"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Создадим пароль">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                    <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="generateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1R6-sL-EzM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p4-Ej-Lla" userLabel="Switch Color">
+                                <rect key="frame" x="132" y="518.5" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="BT3-rF-xhO"/>
+                                    <constraint firstAttribute="height" constant="30" id="HKG-N6-epc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Поменяй цвет фона">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="changeColorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVf-pK-beM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NN9-Nt-HdN">
+                                <rect key="frame" x="132" y="144" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XLs-fS-Lb9"/>
+                                    <constraint firstAttribute="width" constant="150" id="vtY-hp-z8j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="2Gn-ms-UJk">
+                                <rect key="frame" x="302" y="144" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="7oV-GK-zEY"/>
+                                    <constraint firstAttribute="height" constant="20" id="xMX-gd-jGj"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pdw-E9-mzz">
+                                <rect key="frame" x="132" y="404" width="150" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ukO-dw-wTh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NN9-Nt-HdN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7gw-zx-uxw"/>
+                            <constraint firstItem="Pdw-E9-mzz" firstAttribute="top" secondItem="ZE5-I8-BA5" secondAttribute="bottom" constant="100" id="7sQ-wj-ajV"/>
+                            <constraint firstItem="9p4-Ej-Lla" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8Bp-Nz-TiE"/>
+                            <constraint firstItem="NN9-Nt-HdN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="N8X-7z-j9C"/>
+                            <constraint firstItem="2Gn-ms-UJk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="NyB-lZ-GcH"/>
+                            <constraint firstItem="ZE5-I8-BA5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Pi9-qe-xEp"/>
+                            <constraint firstItem="9p4-Ej-Lla" firstAttribute="top" secondItem="Pdw-E9-mzz" secondAttribute="bottom" constant="100" id="Rl4-3D-Mgd"/>
+                            <constraint firstItem="Pdw-E9-mzz" firstAttribute="top" secondItem="ZE5-I8-BA5" secondAttribute="bottom" constant="100" id="UbU-QM-tx7"/>
+                            <constraint firstItem="Pdw-E9-mzz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ckg-v3-1Aj"/>
+                            <constraint firstItem="Pdw-E9-mzz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="gZ5-kk-G9x"/>
+                            <constraint firstItem="ZE5-I8-BA5" firstAttribute="top" secondItem="NN9-Nt-HdN" secondAttribute="bottom" constant="100" id="hmI-jn-OzK"/>
+                            <constraint firstItem="2Gn-ms-UJk" firstAttribute="leading" secondItem="NN9-Nt-HdN" secondAttribute="trailing" constant="20" id="t3V-pJ-HnA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="2Gn-ms-UJk" id="2Kl-NL-WMq"/>
+                        <outlet property="generateButton" destination="ZE5-I8-BA5" id="Kkg-24-u9H"/>
+                        <outlet property="infoLabel" destination="Pdw-E9-mzz" id="5j8-aL-Jlp"/>
+                        <outlet property="switchColorButton" destination="9p4-Ej-Lla" id="nhG-R8-59C"/>
+                        <outlet property="textField" destination="NN9-Nt-HdN" id="3Lt-mT-4ge"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
