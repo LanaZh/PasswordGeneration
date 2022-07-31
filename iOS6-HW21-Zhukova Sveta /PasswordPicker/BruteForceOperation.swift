@@ -2,7 +2,6 @@
 import Foundation
 
 class BruteForceOperation: Operation {
-    
     var password: String
     
     init(password: String) {
@@ -51,7 +50,6 @@ class BruteForceOperation: Operation {
                 resultString = String(generateBruteForce(String(resultString.dropLast()), fromArray: array)) + String(resultString.last!)
             }
         }
-        
         return resultString
     }
 }
